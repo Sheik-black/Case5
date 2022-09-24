@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 5
+   Case Problem 1
+
+   Author: Sheik Black
+   Date: 09/23/2022
+
+   Filename: gp_layout.css
+
+   This file contains the layout styles and media
+   queries used with sample pages from the Golden
+   Pulps website.
+
+*/
+
+
+/* Import Basic Design Styles Used on All Screens */
+
+@import url("gp_designs.css");
+
+
+
+/* Flex Layout Styles */
+body{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+body.sheet {
+  flex-grow: 1;
+  flex-shrink: 3;
+  flex-basis: 301px;
+}
+
+/* ============================================
+	Mobile Devices: 0 - 480 pixels
+   ============================================
+*/
+@media screen and (max-width: 480px){
+
+  img.panel{
+    width: %100;
+    max-width: %100;
+  }
+
+  nav.ul {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+  }
+}
+
+
+
+/* ===================================================
+	Tablet and Desktop Devices: Greater than 480 pixels
+   ===================================================
+*/
